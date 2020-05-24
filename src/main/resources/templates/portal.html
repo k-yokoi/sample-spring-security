@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link rel="stylesheet" href="static/css/flex.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/flex_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/flex_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <link rel="stylesheet" href="static/css/portal.css" media="(min-width: 1280px)">
+    <link rel="stylesheet" href="static/css/portal_mobile.css" media="(min-width: 320px) and (max-width: 767px)">
+    <link rel="stylesheet" href="static/css/portal_tablet.css" media="(min-width: 768px) and (max-width: 1279px)">
+    <script type="text/javascript" src="webjars/jquery/jquery.js"></script>
+    <script type="text/javascript" src="static/js/portal.js"></script>
+</head>
+<body>
+<h1>Hello! Spring Security sample!</h1>
+Successful Login! SessionId : <span th:text="${sessionId}"></span>
+
+<form id="logoutForm" action="/logout" method="get" >
+    <button id="logoutButton" name="logoutButton" class="main-button" type="submit" value="Submit" >Logout</button>
+</form>
+
+<button id="invalidateSessionButton" name="invalidateSessionButton" class="main-button" type="button" value="invalidateSession"  onclick="invalidateSession()">Invalidate Session</button>
+<div id="invalidatedSessionId"></div>
+
+</body>
